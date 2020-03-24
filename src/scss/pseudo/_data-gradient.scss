@@ -1,0 +1,154 @@
+/** @format */
+&[data-gradient] {
+	// display: inline-block;
+	@supports (-webkit-background-clip: text) {
+		&[data-gradient-type] {
+			&[data-gradient-type*="p"] {
+				// display: none;
+			}
+		}
+		&:after {
+			content: attr(data-gradient);
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			font-size: inherit;
+			font-weight: inherit;
+			font-style: inherit;
+			font-family: inherit;
+			text-shadow: none;
+			background: -webkit-linear-gradient(
+				135deg,
+				color(main),
+				color(second),
+				color(main_alt)
+			);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			padding: inherit;
+			border: inherit;
+			line-height: inherit;
+			@include box-sizing(border-box);
+		}
+		&[class*="fa-"] {
+			&:before {
+				display: block;
+				// text-indent: -.05em;
+				// outline :0;
+				// text-align: left;
+				// text-shadow: none;
+			}
+			&:after {
+				// width: auto;
+				line-height: 1em;
+				text-align: center;
+			}
+		}
+		&[class~="fa-arrow-right"] {
+			&:after {
+				content: "\f061";
+				// display: inline-block;
+				// font-family: 'Font Awesome 5 Free';
+			}
+		}
+		&[class~="fa-arrow-left"] {
+			&:after {
+				content: "\f060";
+			}
+		}
+		&[class~="fa-clock"] {
+			&:after {
+				content: "\f017";
+			}
+		}
+		&[class~="fa-graduation-cap"] {
+			&:after {
+				content: "\f19d";
+			}
+		}
+		&[class~="fa-id-card"] {
+			&:after {
+				content: "\f2c2";
+			}
+		}
+		&[class~="fa-grin-tongue-wink"] {
+			&:after {
+				content: "\f58b";
+			}
+		}
+		&[class~="fa-instagram"] {
+			&:after {
+				content: "\f16d";
+			}
+		}
+		&[class~="fa-facebook-square"] {
+			&:after {
+				content: "\f082";
+			}
+		}
+		&[class~="fa-phone"] {
+			&:after {
+				content: "\f095";
+			}
+		}
+		&[class~="fa-envelope-open"] {
+			&:after {
+				content: "\f2b6";
+			}
+		}
+		&[class~="fa-dollar-sign"] {
+			&:after {
+				content: "\f155";
+			}
+		}
+		&[class~="fa-cocktail"] {
+			&:after {
+				content: "\f561";
+			}
+		}
+		&[class~="fa-eye"] {
+			&:after {
+				content: "\f06e";
+			}
+		}
+		&[class~="fa-broadcast-tower"] {
+			&:after {
+				content: "\f519";
+			}
+		}
+		&[class~="fa-laptop"] {
+			&:after {
+				content: "\f109";
+			}
+		}
+		&[class~="fa-award"] {
+			&:after {
+				content: "\f559";
+			}
+		}
+		&[class~="fa-theater-masks"] {
+			&:after {
+				content: "\f630";
+			}
+		}
+		&[class~="fa-bars"] {
+			&:after {
+				content: "\f0c9";
+			}
+		}
+		&[class~="fa-times"] {
+			&:after {
+				content: "\f00d";
+			}
+		}
+	}
+	// &:hover:not([disabled]):not([class~="active"]):not([class~="open"]){
+	// 	&:after{
+	// 		cursor: text;
+	// 		display: block;
+	// 	}
+	// }
+}

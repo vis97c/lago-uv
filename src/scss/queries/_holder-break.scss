@@ -1,0 +1,259 @@
+/** @format */
+@media #{$holder-break} {
+	* {
+		&[data-gradient] {
+			// display: inline-block;
+			@supports (-webkit-background-clip: text) {
+				&:after {
+				}
+				&[class*="fa-"] {
+					&:before {
+					}
+					&:after {
+						// width: auto;
+						// line-height: 1.2em;
+					}
+				}
+			}
+		}
+	}
+	body {
+		// display: none;
+	}
+	#appex {
+		.navegacion {
+			.logo {
+				&:hover {
+					svg {
+						> * {
+						}
+					}
+				}
+				svg {
+					> * {
+					}
+				}
+			}
+			.nav {
+				// &[class~="hamburguer"]{
+				// 	display: none;
+				// }
+				li {
+					&:last-child {
+					}
+					&:hover {
+						a {
+						}
+					}
+					a {
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+		.views {
+			.tab {
+				&:last-child {
+				}
+				&:before {
+				}
+				&[class~="is_tope"] {
+					.wrapper {
+						&:before,
+						&:after {
+						}
+						&:before {
+							width: 200px;
+							left: -100px;
+						}
+						&:after {
+							width: 100px;
+						}
+					}
+				}
+				&:not([class~="is_tope"]) {
+				}
+				&[id] {
+					&[id~="home"] {
+						&:before {
+						}
+					}
+					&[id~="about-us"] {
+						&:before {
+						}
+					}
+					&[id~="benefits"] {
+						&:before {
+						}
+					}
+					&[id~="requirements"] {
+						&:before {
+						}
+					}
+					&[id~="contact"] {
+						&:before {
+						}
+					}
+				}
+				.wrapper {
+					.holder {
+						&[data-layout~="title"] {
+						}
+						&[data-layout~="asimetric"] {
+							.txt {
+								margin-right: 0;
+							}
+							.media {
+								display: none;
+							}
+						}
+						.title {
+							h1 {
+								svg {
+									height: 10.5vw;
+								}
+							}
+							span {
+								font-size: 4.5vw;
+								// font-weight: 400;
+							}
+						}
+						.txt {
+							&[class~="trademark"] {
+								p {
+									&:after {
+									}
+								}
+							}
+							h2,
+							p {
+							}
+							h2 {
+								font-size: 2rem;
+								margin-bottom: 20px;
+							}
+							p {
+								font-size: 1.2rem;
+								// margin-bottom: 20px;
+								&:last-child {
+								}
+								b {
+								}
+							}
+						}
+						.media {
+						}
+						.columns {
+							// column-gap: 20px;
+							&[class~="links"] {
+								li {
+									&:hover {
+										span,
+										p,
+										a {
+										}
+										a {
+										}
+									}
+									span,
+									p,
+									a {
+									}
+									a {
+										font-size: 1.2rem;
+										span {
+											width: 45px;
+										}
+									}
+								}
+							}
+							&[class~="color"] {
+								li {
+									p,
+									span {
+									}
+									span {
+									}
+									p {
+										padding: 10px;
+									}
+								}
+							}
+							li {
+								&:hover {
+									a {
+									}
+								}
+								&:last-child {
+								}
+								span,
+								p,
+								a {
+								}
+								span {
+									width: 45px;
+									i {
+										font-size: 25px;
+										height: 25px;
+									}
+								}
+								p {
+									font-size: 1.2rem;
+									b {
+									}
+								}
+								a {
+									font-size: 1.2rem;
+									span {
+										// width: 45px;
+										i {
+											font-size: 1.8rem;
+											width: 1.8rem;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				.aside {
+					width: 100px;
+					&:before {
+					}
+					&[class~="back"] {
+						&:before {
+						}
+						.holder {
+							* > {
+							}
+						}
+					}
+					&[class~="forward"] {
+						&:before {
+						}
+						.holder {
+							* > {
+							}
+						}
+					}
+					.holder {
+						span,
+						h3 {
+						}
+						span {
+							font-size: 14px;
+						}
+						h3 {
+							font-size: 4.5vw;
+							// font-weight: 400;
+						}
+						.side_action {
+							&:hover {
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

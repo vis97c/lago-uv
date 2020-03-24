@@ -1,0 +1,521 @@
+/** @format */
+@media #{$mobile} {
+	* {
+		&[data-gradient] {
+			// display: inline-block;
+			@supports (-webkit-background-clip: text) {
+				&:after {
+					// display: none;
+				}
+				&[class*="fa-"] {
+					&:before {
+					}
+					&:after {
+						// width: auto;
+						// line-height: 1.2em;
+					}
+				}
+			}
+		}
+	}
+	body {
+		// display: none;
+		overflow: auto;
+	}
+	#appex {
+		// @include flex-flow(, );
+		// overflow: auto;
+		// overflow-x: hidden;
+		// overflow-y: scroll;
+		height: auto;
+		overflow: hidden;
+		@include flexbox(column, nowrap, flex-start, stretch);
+		.navegacion {
+			position: fixed;
+			background: color(third);
+			@include box-shadow(5px 5px 15px color(third_alt, 0.3));
+			.logo {
+				&:hover {
+					svg {
+						> * {
+							fill: color(second);
+						}
+					}
+				}
+				svg {
+					height: 45px;
+					font-size: 45px;
+					@include filter(none);
+					> * {
+						// fill: color(third);
+					}
+				}
+			}
+			.nav {
+				&[class~="hamburguer"] {
+					@include d_flex();
+					li {
+						a {
+							display: block;
+						}
+					}
+				}
+				&[class~="menu"] {
+					position: absolute;
+					top: 100%;
+					left: 0;
+					width: 100%;
+					height: calc(100vh - 60px);
+					background: color(third);
+					max-height: 0;
+					overflow: hidden;
+					// padding-top: 60px;
+					z-index: 0;
+					@include box-sizing(border-box);
+					@include flexbox(column, nowrap, center, stretch);
+					@include transition(max-height 0.3s ease-out);
+					&[class~="is_open"] {
+						max-height: 2000px;
+					}
+					li {
+						// width: 100%;
+						margin-bottom: 10px;
+						margin-right: 0;
+						&:last-child {
+							// margin-bottom: 0;
+						}
+						a {
+							width: 100%;
+							display: block;
+							text-align: center;
+							padding: 20px 0;
+							// text-align: center;
+						}
+						&:last-child {
+						}
+						&:hover {
+							a {
+								// background: negro(1);
+							}
+							&:before {
+							}
+						}
+					}
+				}
+				li {
+					&:last-child {
+					}
+					&:hover {
+						a {
+							color: color(third);
+							background: color(second);
+							text-shadow: none;
+							i {
+								&:after {
+									display: none;
+								}
+							}
+						}
+					}
+					&[class~="active"] {
+						a {
+							color: color(third);
+							background: color(second);
+							text-shadow: none;
+						}
+					}
+					a {
+						// font-size: 14px;
+						text-shadow: none;
+						color: color(third);
+					}
+				}
+			}
+		}
+		.views {
+			overflow: hidden;
+			height: auto;
+			padding-top: 60px;
+			border-bottom: none;
+			border-right: 2px solid transparent;
+			// overflow-x: hidden;
+			// overflow-y: scroll;
+			@include flex-flow(column, nowrap);
+			.tab {
+				padding: 30px 0;
+				margin-right: 0;
+				border-bottom: none;
+				height: auto;
+				min-height: calc(100vh - 60px);
+				width: 100%;
+				min-width: 0;
+				// overflow: hidden;
+				&:before {
+					opacity: 1;
+				}
+				&:not(:first-child) {
+					.wrapper {
+						&:before,
+						&:after {
+							display: none;
+						}
+					}
+				}
+				&:not(:last-child) {
+					margin-bottom: 2px;
+				}
+				&[class~="is_tope"] {
+					.wrapper {
+						&:before,
+						&:after {
+						}
+						&:before {
+							width: 30vw;
+							left: 0;
+						}
+						&:after {
+							width: 30vw;
+						}
+					}
+				}
+				&[id] {
+					&[id~="benefits"],
+					&[id~="requirements"] {
+						padding: 0;
+						margin-bottom: 0;
+						&:before {
+							display: none;
+						}
+						.wrapper {
+							background: color(third);
+							.holder {
+								.txt {
+									background: color(third);
+									h2 {
+										margin-bottom: 0;
+										padding: 30px;
+										min-height: 100vw;
+										@include box-sizing(border-box);
+										@include flexbox(
+											row,
+											nowrap,
+											flex-start,
+											center
+										);
+										&:before {
+											content: "";
+											display: block;
+											width: 100%;
+											height: 100%;
+											position: absolute;
+											top: 0;
+											left: 0;
+											z-index: -1;
+											background-color: color(main);
+											background-repeat: no-repeat;
+											background-size: cover;
+											background-position: 50% 50%;
+											// background: rgba($main_color, .9);
+											// background-attachment: fixed;
+											opacity: 0.7;
+											// @include filter(saturate(1.2));
+											@include transition(
+												all 0.3s ease-out
+											);
+											// @supports (-webkit-overflow-scrolling: touch) {
+											/* CSS for other than iOS devices */
+											// 	background-attachment: scroll;
+											// }
+										}
+										&:after {
+											@include flexbox(
+												row,
+												nowrap,
+												flex-start,
+												center
+											);
+										}
+									}
+								}
+								.columns {
+									p,
+									span {
+										font-weight: 600;
+										color: color(third);
+										text-shadow: none;
+									}
+								}
+							}
+						}
+					}
+					&[id~="benefits"] {
+						.wrapper {
+							.holder {
+								.txt {
+									h2 {
+										&:before {
+											background-image: url("/images/3_i.png");
+										}
+									}
+								}
+								.columns {
+									&[class~="wrap"] {
+										li {
+											&:last-child {
+												.columns {
+													&[class~="color"] {
+														li {
+															&:nth-child(2n) {
+																@include flex-flow(
+																	row-reverse,
+																	nowrap
+																);
+															}
+															&:nth-child(2n
+																	+ 1) {
+																@include flex-flow(
+																	row,
+																	nowrap
+																);
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					&[id~="requirements"] {
+						.wrapper {
+							.holder {
+								.txt {
+									h2 {
+										&:before {
+											background-image: url("/images/6.png");
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				.wrapper {
+					min-width: 0;
+					padding: 0;
+					.holder {
+						&[data-layout~="title"] {
+							// @include flexbox(column, nowrap, center, center);
+							@include align-items(flex-start);
+						}
+						.title {
+							// word-spacing: 100vw;
+							// white-space: normal;
+							// font-size: 6.5vh;
+							// font-weight: 300;
+							padding: 0 30px;
+							h1 {
+								svg {
+									height: 10.5vh;
+									> * {
+										path {
+										}
+									}
+								}
+							}
+							span {
+								// word-spacing: 100vw;
+								// white-space: normal;
+								font-size: 4.5vh;
+								font-weight: 400;
+							}
+						}
+						.txt {
+							margin-right: 0;
+							// max-width: 480px;
+							// margin:0 auto;
+							&[class~="trademark"] {
+								p {
+									&:after {
+									}
+								}
+							}
+							h2,
+							p {
+							}
+							h2 {
+								padding: 0 30px;
+								font-size: 4.5vh;
+								// font-weight: 400;
+								letter-spacing: 0.2em;
+								// word-spacing: 100vw;
+								white-space: normal;
+								margin-bottom: 40px;
+							}
+							p {
+								// font-size: 16px;
+								// margin-bottom: 20px;
+								// text-shadow: 1px 1px 2px $third_alt_color;
+								&:last-child {
+								}
+								b {
+								}
+							}
+							> p,
+							> ul {
+								background: transparent;
+								padding: 0 30px;
+								margin-bottom: 20px;
+								&:nth-child(2) {
+									padding-top: 0;
+								}
+								&:last-child {
+									padding-bottom: 0;
+								}
+							}
+						}
+						.media {
+						}
+						.columns {
+							margin: 0 auto;
+							&[class~="wrap"] {
+								padding: 15px 0;
+								@include flex-flow(column, nowrap);
+								> li {
+									&:first-child {
+										margin-right: 0;
+										// margin-bottom: 20px;
+									}
+								}
+								&[class~="reversed"] {
+									@include flex-flow(column, nowrap);
+									> li {
+										&:first-child {
+											margin-left: 0;
+										}
+									}
+								}
+								// li{
+								// 	&:last-child{
+								// 		.colums{
+								// 			&[class~="color"]{
+								// 				li{
+								// 					&:nth-child(2n){
+								// 						display: none;
+								// 						@include flex-flow(row-reverse, nowrap);
+								// 					}
+								// 				}
+								// 			}
+								// 		}
+								// 	}
+								// }
+							}
+							&[class~="links"] {
+								column-count: unset;
+								column-gap: unset;
+								li {
+									&:hover {
+										span,
+										p,
+										a {
+										}
+										a {
+										}
+									}
+									span,
+									p,
+									a {
+									}
+									a {
+										span {
+										}
+									}
+								}
+							}
+							&[class~="color"] {
+								li {
+									margin-bottom: 0;
+									max-width: 480px;
+									&:nth-child(2n + 1) {
+										@include flex-flow(row-reverse, nowrap);
+									}
+									p,
+									span {
+									}
+									span {
+									}
+									p {
+										padding: 15px 30px;
+									}
+								}
+							}
+							li {
+								// @include align-items(center);
+								&:hover {
+									a {
+									}
+								}
+								&:last-child {
+								}
+								span,
+								p,
+								a {
+									text-shadow: 1px 1px 2px color(third_alt);
+								}
+								span {
+									width: 55px;
+									i {
+										// font-size: 25px;
+										// width: 25px;
+									}
+								}
+								p {
+									// font-size: 16px;
+									b {
+									}
+								}
+								a {
+									// font-size: 16px;
+									span {
+										// width: 45px;
+										i {
+											// font-size: 25px;
+											// width: 25px;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				.aside {
+					display: none;
+				}
+			}
+		}
+		.inferior {
+			position: relative;
+			left: initial;
+			bottom: initial;
+			height: 60px;
+			background: color(third);
+			.social {
+				// display: none;
+				@include justify-content(center);
+				li {
+					&:last-child {
+					}
+					a {
+						text-shadow: none;
+						color: color(third);
+						&:hover {
+							color: color(second);
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+.DS_Store
+node_modules/
+vendor/
+public_html/
+dist/
+src/js/compiled-icons/
+*.log
+package-lock.json
+*.lock
+
+# Editor directories and files
+.env
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
