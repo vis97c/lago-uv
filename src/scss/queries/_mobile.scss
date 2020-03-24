@@ -251,13 +251,13 @@
 					&[id~="benefits"] {
 						.wrapper {
 							.holder {
-								.txt {
-									h2 {
-										&:before {
-											background-image: url("/images/3_i.png");
-										}
-									}
-								}
+								// .txt {
+								// 	h2 {
+								// 		&:before {
+								// 			background-image: url("../~_assets/hackerman.jpg");
+								// 		}
+								// 	}
+								// }
 								.columns {
 									&[class~="wrap"] {
 										li {
@@ -288,19 +288,19 @@
 							}
 						}
 					}
-					&[id~="requirements"] {
-						.wrapper {
-							.holder {
-								.txt {
-									h2 {
-										&:before {
-											background-image: url("/images/6.png");
-										}
-									}
-								}
-							}
-						}
-					}
+					// &[id~="requirements"] {
+					// 	.wrapper {
+					// 		.holder {
+					// 			.txt {
+					// 				h2 {
+					// 					&:before {
+					// 						background-image: url("../~_assets/hackerman.jpg");
+					// 					}
+					// 				}
+					// 			}
+					// 		}
+					// 	}
+					// }
 				}
 				.wrapper {
 					min-width: 0;

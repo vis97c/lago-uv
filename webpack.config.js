@@ -121,6 +121,7 @@ var config = {
 						loader: "file-loader",
 						options: {
 							name: "images/[name].[ext]",
+							esModule: false,
 						},
 					},
 				],
@@ -133,6 +134,7 @@ var config = {
 						loader: "file-loader",
 						options: {
 							name: "video/[name].[ext]",
+							esModule: false,
 						},
 					},
 				],
@@ -145,6 +147,7 @@ var config = {
 						loader: "file-loader",
 						options: {
 							name: "fonts/[name].[ext]",
+							esModule: false,
 						},
 					},
 				],
