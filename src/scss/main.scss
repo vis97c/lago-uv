@@ -45,7 +45,7 @@ body {
 	font-family: font(main);
 	background: color(red);
 	overflow: hidden;
-	color: color(white);
+	color: color(blanco);
 	// font-size: 0;
 	font-size: 1rem;
 	// color: #fff;
@@ -129,7 +129,7 @@ body {
 				}
 			}
 			svg {
-				@include filter(drop-shadow(1px 1px 2px color(black)));
+				@include filter(drop-shadow(1px 1px 2px color(negro)));
 				// @include transition(all .3s ease-out);
 				// > * {
 				// 	// fill: color(main);
@@ -175,7 +175,7 @@ body {
 					color: color(main_alt);
 					font-size: 1.2rem;
 					font-weight: 600;
-					text-shadow: 1px 1px 2px color(black);
+					text-shadow: 1px 1px 2px color(negro);
 					padding: 10px 15px;
 					@include transition(all 0.3s ease-out);
 				}
@@ -232,7 +232,7 @@ body {
 				top: 0;
 				left: 0;
 				z-index: -1;
-				// background-color: color(black);
+				// background-color: color(negro);
 				background-repeat: no-repeat;
 				background-size: cover;
 				background-position: 50% 50%;
@@ -268,8 +268,8 @@ body {
 						// width: 180px;
 						height: 2px;
 						position: absolute;
-						background: color(white);
-						// @include box-shadow(1px 1px 2px color(black));
+						background: color(blanco);
+						// @include box-shadow(1px 1px 2px color(negro));
 						// @supports (-webkit-background-clip: text) {
 						// 	@include linear-gradient(
 						// 		135deg,
@@ -355,7 +355,7 @@ body {
 						// display: inline-table;
 						// display: block;
 						// width: auto;
-						// white-space: pre-line;
+						// blanco-space: pre-line;
 						// display: inline-flex;
 						// margin:0 auto;
 						// width: fit-content;
@@ -384,7 +384,7 @@ body {
 								width: auto;
 								display: inline-block;
 								// @include filter(
-								// 	drop-shadow(1px 1px 2px color(black))
+								// 	drop-shadow(1px 1px 2px color(negro))
 								// );
 								> * {
 									// fill: color(main);
@@ -401,8 +401,8 @@ body {
 							font-weight: 300;
 							text-transform: uppercase;
 							letter-spacing: 0.2em;
-							// text-shadow: 1px 1px 2px color(black);
-							white-space: nowrap;
+							// text-shadow: 1px 1px 2px color(negro);
+							blanco-space: nowrap;
 						}
 					}
 					.txt {
@@ -410,7 +410,7 @@ body {
 						// background-image: radial-gradient(circle at 50% 50%, color(third), transparent);
 						h2,
 						p {
-							text-shadow: 1px 1px 2px color(black);
+							text-shadow: 1px 1px 2px color(negro);
 						}
 						h2 {
 							font-size: 2.4rem;
@@ -419,7 +419,7 @@ body {
 							text-transform: uppercase;
 							font-weight: 400;
 							display: inline-block;
-							// text-shadow: 1px 1px 2px color(black);
+							// text-shadow: 1px 1px 2px color(negro);
 							// color: color(second);
 						}
 						p {
@@ -495,7 +495,7 @@ body {
 							i {
 								// display: block;
 								margin-bottom: 20px;
-								text-shadow: 1px 1px 2px color(black);
+								text-shadow: 1px 1px 2px color(negro);
 								// overflow: visible;
 								&:last-child {
 									margin-bottom: 0;
@@ -562,10 +562,10 @@ body {
 								}
 								span,
 								p {
-									text-shadow: 1px 1px 2px color(black);
+									text-shadow: 1px 1px 2px color(negro);
 								}
 								a {
-									color: color(white);
+									color: color(blanco);
 									font-size: 1.4rem;
 									font-weight: 600;
 									padding: 10px 0;
@@ -624,14 +624,14 @@ body {
 								span {
 									// color:$second_color;
 									// padding: 0 10px;
-									text-shadow: 1px 1px 2px color(black);
+									text-shadow: 1px 1px 2px color(negro);
 								}
 								span {
 									// background: rgba($main_color, .3);
 									// color:$main_alt_color;
 								}
 								p {
-									color: color(white);
+									color: color(blanco);
 									font-weight: 400;
 									// background: color(main);
 									padding: 15px;
@@ -698,8 +698,8 @@ body {
 					width: 2px;
 					height: calc(100% - 120px);
 					top: 60px;
-					background: color(white);
-					// @include box-shadow(1px 1px 2px color(black));
+					background: color(blanco);
+					// @include box-shadow(1px 1px 2px color(negro));
 					// @supports (-webkit-background-clip: text) {
 					// 	@include linear-gradient(
 					// 		135deg,
@@ -745,7 +745,7 @@ body {
 					span,
 					h3 {
 						// color: color(second);
-						// text-shadow: 1px 1px 2px color(black);
+						// text-shadow: 1px 1px 2px color(negro);
 					}
 					span {
 						font-size: 1.2rem;
@@ -757,8 +757,8 @@ body {
 						font-weight: 200;
 					}
 					.side_action {
-						color: color(white);
-						// text-shadow: 1px 1px 2px color(black);
+						color: color(blanco);
+						// text-shadow: 1px 1px 2px color(negro);
 						&:hover {
 							color: color(red);
 							text-shadow: none;
@@ -797,7 +797,7 @@ body {
 					color: color(main_alt);
 					font-size: 1.2rem;
 					font-weight: 400;
-					text-shadow: 1px 1px 2px color(black);
+					text-shadow: 1px 1px 2px color(negro);
 					@include transition(color 0.3s ease-out);
 					&:hover {
 						color: color(second);
