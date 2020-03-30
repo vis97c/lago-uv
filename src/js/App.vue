@@ -102,7 +102,6 @@
 					<div class="holder" data-layout="title">
 						<div class="title">
 							<span>Lago UV</span>
-							<span>Victor Saa</span>
 						</div>
 					</div>
 				</article>
@@ -124,10 +123,16 @@
 				</div>
 			</div>
 			<div
-				id="escena-01"
+				v-for="(escena, index) in escenas"
+				:id="'escena-' + digits(escena.id)"
+				:key="index"
 				class="tab"
-				@mouseenter="setActive('escena-01')"
+				@mouseenter="setActive('escena-' + digits(escena.id))"
 			>
+				<img
+					:src="escena.url"
+					:alt="'Escena ' + digits(escena.id + 1)"
+				/>
 				<!-- <div class="aside back">
 					<div class="holder">
 						<span>Escena</span>
@@ -145,15 +150,31 @@
 						</a>
 					</div>
 				</div> -->
-				<article class="wrapper"></article>
+				<!-- <article class="wrapper"></article> -->
 				<div class="aside forward">
-					<div class="holder">
+					<div v-if="index + 1 < escenas.length" class="holder">
 						<span>Escena</span>
-						<h3>02</h3>
+						<h3>{{ digits(escena.id + 1) }}</h3>
 						<a
-							href="#benefits"
+							:href="'#escena-' + digits(escena.id + 1)"
 							class="side_action"
-							@click.prevent="moveTo('#escena-02')"
+							@click.prevent="
+								moveTo('#escena-' + digits(escena.id + 1))
+							"
+						>
+							<i
+								class="fas fa-arrow-right icon"
+								data-size="_25"
+							></i>
+						</a>
+					</div>
+					<div v-else class="holder">
+						<span>Finalizar</span>
+						<h3>∞</h3>
+						<a
+							href="#end"
+							class="side_action"
+							@click.prevent="moveTo('#end')"
 						>
 							<i
 								class="fas fa-arrow-right icon"
@@ -163,91 +184,7 @@
 					</div>
 				</div>
 			</div>
-			<div
-				id="escena-02"
-				class="tab"
-				@mouseenter="setActive('escena-02')"
-			>
-				<!-- <div class="aside back">
-					<div class="holder">
-						<span>Escena</span>
-						<h3>04</h3>
-						<a
-							href="#about-us"
-							class="side_action"
-							@click.prevent="moveTo('#about-us')"
-						>
-							<i
-								data-gradient
-								class="fas fa-arrow-left icon"
-								data-size="_25"
-							></i>
-						</a>
-					</div>
-				</div> -->
-				<article class="wrapper"></article>
-				<div class="aside forward">
-					<div class="holder">
-						<span>Escena</span>
-						<h3>03</h3>
-						<a
-							href="#requirements"
-							class="side_action"
-							@click.prevent="moveTo('#escena-03')"
-						>
-							<i
-								class="fas fa-arrow-right icon"
-								data-size="_25"
-							></i>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div
-				id="escena-03"
-				class="tab"
-				@mouseenter="setActive('escena-03')"
-			>
-				<!-- <div class="aside back">
-					<div class="holder">
-						<span :data-gradient="c.title.c">{{ c.title.c }}</span>
-						<h3 data-gradient="02">02</h3>
-						<a
-							href="#benefits"
-							class="side_action"
-							@click.prevent="moveTo('#benefits')"
-						>
-							<i
-								data-gradient
-								class="fas fa-arrow-left icon"
-								data-size="_25"
-							></i>
-						</a>
-					</div>
-				</div> -->
-				<article class="wrapper"></article>
-				<div class="aside forward">
-					<div class="holder">
-						<span>Escena</span>
-						<h3>04</h3>
-						<a
-							href="#contact"
-							class="side_action"
-							@click.prevent="moveTo('#escena-04')"
-						>
-							<i
-								class="fas fa-arrow-right icon"
-								data-size="_25"
-							></i>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div
-				id="escena-04"
-				class="tab"
-				@mouseenter="setActive('escena-04')"
-			>
+			<div id="end" class="tab" @mouseenter="setActive('end')">
 				<div class="aside back">
 					<div class="holder">
 						<span>
@@ -266,7 +203,15 @@
 						</a>
 					</div>
 				</div>
-				<article class="wrapper"></article>
+				<article class="wrapper">
+					<div class="holder" data-layout="title">
+						<div class="title">
+							<span>
+								Victor Saa - {{ new Date().getFullYear() }}
+							</span>
+						</div>
+					</div>
+				</article>
 			</div>
 		</section>
 		<!-- <footer class="inferior">
@@ -302,6 +247,8 @@
 
 <script>
 	// import Hello from './components/HelloWorld.vue'
+	import Escenas from "./escenas.json";
+
 	export default {
 		name: "App",
 		components: {
@@ -315,6 +262,7 @@
 				activo: "home",
 				ventana: null,
 				mNavOpen: false,
+				escenas: Escenas,
 			};
 		},
 		computed: {
@@ -422,6 +370,12 @@
 			// 	//tu funcion
 			// 	return
 			// },
+			digits(number) {
+				if (number < 10) {
+					return "0" + number;
+				}
+				return number;
+			},
 			debounced: function(delay, fn) {
 				let timerId;
 				return function(...args) {
