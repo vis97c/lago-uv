@@ -101,7 +101,7 @@
 				<article class="wrapper">
 					<div class="holder" data-layout="title">
 						<div class="title">
-							<span>Lago UV</span>
+							<span>Fantasia decadente</span>
 						</div>
 					</div>
 				</article>
@@ -247,7 +247,7 @@
 
 <script>
 	// import Hello from './components/HelloWorld.vue'
-	import Escenas from "./escenas.json";
+	import Escenas from "./escenas_reverse.json";
 
 	export default {
 		name: "App",
@@ -262,7 +262,7 @@
 				activo: "home",
 				ventana: null,
 				mNavOpen: false,
-				escenas: Escenas,
+				escenas: Escenas.reverse(),
 			};
 		},
 		computed: {
